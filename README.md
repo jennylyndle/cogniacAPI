@@ -21,7 +21,7 @@ This app works for the image sizes in the current image set. If larger images ar
 
 ## Instructions to run:
 After checking out the code, you can run it using ng serve command if you have Angular CLI installed.
-Once it is up and running, you can navigate to http://localhost:4200/home to view the app.
+Once it is up and running, you can navigate to http://localhost:4200/ to view the app.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.3.
 
 ## Development server
