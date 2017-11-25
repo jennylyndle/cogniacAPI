@@ -1,6 +1,6 @@
 # CogniacAPI
 
-I proioritized the functionality according to the usecase and then focused on usability.
+I proioritized the functionality according to the usecase and then focused on usability and responsiveness.
 I divided the project into 3 main components:
 1. Grid
 2. Pagination
@@ -16,7 +16,9 @@ Dataset can be filtered based on the probability and start and end dates.
 I have to work on the validations for the filters where I need to make sure that the min probability is less than max probability and start date < end date when both are applied together.
 Yet to add the provisions for the user to mark if the detection is right.
 The usability can be improved by using icons(for filter and clear filter)
-Pagination could be improved to make it a bit more usable.
+Pagination could be improved to make it a bit more usable. I used the angular material component for faster integration but ended up compromising on flexibility.
+Spinner needs to be added for user feedback.
+Need to model the filter data and optimise the param valiation before requesting for detections.
 This app works for the image sizes in the current image set. If larger images are provided, I would have to handle the resizing.
 
 ## Instructions to run:
