@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, Response, RequestOptions} from '@angular/http';
+import { Http, Headers, Response, RequestOptions, URLSearchParams} from '@angular/http';
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map'
 
@@ -17,7 +17,6 @@ export class ApiService {
  // params = new URLSearchParams();
 //  options:RequestOptions;
   constructor(private http: Http) {
-
       var currentUser = JSON.parse(localStorage.getItem('currentUser'));
       this.token = currentUser && currentUser.token;
   }
