@@ -1,0 +1,6 @@
+@import "../../node_modules/@angular/material/theming";
+@import "main-theme";
+//@import "next-theme";
+$curr-theme : $main-theme;
+
+//$start-background:map-get(map-get($curr-theme, primary),'darker');

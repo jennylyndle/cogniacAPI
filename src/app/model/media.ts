@@ -1,0 +1,38 @@
+export interface Media {
+    author:any;
+    author_profile_url:any;
+    created_at:string;
+    duration:any;
+    external_media_id:any;
+    filename:string;
+    fps:any;
+    frame:any;
+    frame_durations:Array<any>;
+    image_height:number;
+    image_width:number;
+    license:any;
+    md5:string;
+    media_format:string;
+    media_id: string;
+    media_src:string;
+    media_timestamp:any;
+    media_url:string;
+    meta_tags:any;
+    network_camera_id:any;
+    num_frames:any;
+    original_landing_url:string;
+    original_url:string;
+    parent_media_id:any;
+    parent_media_ids:Array<any>;
+    preview_url:string;
+    resize_urls:any;
+    set_assignment:string;
+    size:any;
+    source_url:string;
+    status:string;
+    tenant_id:string;
+    time_base:any;
+    title:any;
+    uploaded_by_user:string;
+    video:boolean;
+}

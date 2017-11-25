@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+//@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500";
+@import "./themes/variables";
+
+@include mat-core();
+
+
+@mixin my-components-theme($theme){
+   // @include modal-theme($theme);
+  //  @include start-theme($theme);
+}
+
+.theme{
+    @include angular-material-theme($curr-theme);
+   @include my-components-theme($curr-theme);              
+}

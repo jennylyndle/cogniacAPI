@@ -1,0 +1,27 @@
+
+mat-card{
+    background-color:#3f51b5;
+    color:white;
+    padding-bottom:0;
+}
+
+.mat-card-image{
+    max-height:200px;
+}
+
+.cardContainer{
+    margin-top:10px;
+    padding-left:0;
+    //padding-right:0;
+    //margin-right:10px;
+    //border: 1px solid grey;
+}
+
+.updateTime{
+    color:grey;// #70B7F3;
+    font-size:12px;
+}
+
+.description{
+    margin-top:-10px !important;
+}

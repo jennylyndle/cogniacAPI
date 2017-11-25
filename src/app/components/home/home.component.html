@@ -1,0 +1,13 @@
+<mat-toolbar>
+    <span>
+        <img src="assets/images/cogniac-logo.png" alt="">
+    </span>
+</mat-toolbar>
+<div class="homeContainer" fxLayout="column" fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0">
+    <app-paginator [length]="total" [pageIndex]="pageIndex" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (pageEvent)="paginateGrid($event)"></app-paginator>
+    <app-filter (filters)="filter($event)"></app-filter>
+    <div *ngIf="error!=null" class="alert alert-danger">
+        {{error}}
+      </div>
+      <app-image-grid [currentDataSet]="currentDataSet"></app-image-grid>
+</div>

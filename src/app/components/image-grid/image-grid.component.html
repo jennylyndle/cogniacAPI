@@ -1,0 +1,46 @@
+<!--<div class="gridContainer">
+    <mat-grid-list cols="3" rowHeight="300px">
+        <mat-grid-tile
+            *ngFor="let detectionResponseObject of currentDataSet">
+            <mat-card class="example-card">
+              <mat-card-header>
+                <mat-card-title>{{detectionResponseObject.detections[0].desc}}
+                  </mat-card-title>
+              </mat-card-header>
+              <img mat-card-image width="300" height="225" [src]="detectionResponseObject.media.media_url" alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                <p>
+                  last updated {{(detectionResponseObject.updated_at * 1000) | date:'yyyy-MM-dd HH:mm:ss'}}
+                </p>
+              </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+</div>
+-->
+<div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5 cardContainer" *ngFor="let detectionResponseObject of currentDataSet" >
+          <mat-card class="example-card">
+              <!--<mat-card-header>
+                <mat-card-title>{{detectionResponseObject.detections[0].desc}}
+                  </mat-card-title>
+              </mat-card-header>-->
+              <img mat-card-image width="300" height="225" [src]="detectionResponseObject.media.media_url" alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                <div class="description">
+                    <span style="float:left;">
+                        {{detectionResponseObject.detections[0].desc_name}}
+                    </span>
+                    <span style="float:right;color:grey;">
+                        {{detectionResponseObject.detections[0].desc_probability}}%
+                    </span>
+                </div>
+                <p class="updateTime" style="clear:both;">
+                  Last updated {{(detectionResponseObject.updated_at * 1000) | date:'yyyy-MM-dd HH:mm:ss'}}
+                </p>
+              </mat-card-content>
+            </mat-card>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,41 @@
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Filters
+      </mat-panel-title>
+     </mat-expansion-panel-header>
+    <div fxLayout="column" fxLayoutAlign="start center">
+        
+    <form [formGroup]="form" novalidate>
+        <div fxLayout.gt-xs="row" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" class="bottom-margin">
+            
+        <mat-form-field>
+            <input matInput type="number" min="0" max="1" formControlName="minProb" placeholder="Min Probability">
+            <mat-error *ngIf="form.controls.minProb.hasError('empty')">Probability should be between 0 and 1</mat-error>
+        </mat-form-field>
+      
+        <mat-form-field>
+              <input matInput type="number" min="0" max="1" formControlName="maxProb" placeholder="Max Probability">
+              <mat-error *ngIf="form.controls.maxProb.hasError('empty')">Probability should be between 0 and 1</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+              <input matInput [matDatepicker]="startDatepicker" formControlName="startDate" placeholder="Start Date">
+              <mat-datepicker-toggle matSuffix [for]="startDatepicker"></mat-datepicker-toggle>
+              <mat-datepicker #startDatepicker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+                <input matInput [matDatepicker]="endDatepicker" formControlName="endDate" placeholder="End Date">
+                <mat-datepicker-toggle matSuffix [for]="endDatepicker"></mat-datepicker-toggle>
+                <mat-datepicker #endDatepicker></mat-datepicker>
+        </mat-form-field>
+        <input type="checkbox" formControlName="reverse" placeholder="Reverse">Reverse
+      </div>
+      <div fxLayoutAlign="center center">
+        <button [disabled]="form.invalid" mat-raised-button color="accent" (click)="filterDetections($event)">Filter</button>
+        <button mat-raised-button color="accent" (click)="filterDetections('')">Clear Filters</button>
+      </div>
+    </form>
+</div>
+   
+
+  </mat-expansion-panel>

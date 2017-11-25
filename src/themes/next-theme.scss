@@ -1,0 +1,9 @@
+$primary: mat-palette($mat-indigo,100,50,500);
+$next-theme-accent : mat-palette($mat-green,700,300,800);
+$next-theme-warn   : mat-palette($mat-red);
+
+$next-theme : mat-dark-theme(
+                $primary,
+                $next-theme-accent ,
+                $next-theme-warn
+              );              
